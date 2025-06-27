@@ -3,10 +3,7 @@ package chess;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
-import chess.pieces.Bishop;
-import chess.pieces.King;
-import chess.pieces.Pawn;
-import chess.pieces.Rook;
+import chess.pieces.*;
 import org.w3c.dom.ls.LSException;
 
 import java.security.DrbgParameters;
@@ -194,6 +191,10 @@ public class ChessMatch {
         placeNewPiece('a', 1, new Rook(board, Color.WHITE));
         placeNewPiece('h', 1, new Rook(board, Color.WHITE));
 
+        // Cavalos brancos
+        placeNewPiece('b', 1, new Knight(board, Color.WHITE));
+        placeNewPiece('g', 1, new Knight(board, Color.WHITE));
+
         // Bispos brancos
         placeNewPiece('c', 1, new Bishop(board, Color.WHITE));
         placeNewPiece('f', 1, new Bishop(board, Color.WHITE));
@@ -209,6 +210,10 @@ public class ChessMatch {
         // Torres pretas
         placeNewPiece('a', 8, new Rook(board, Color.BLACK));
         placeNewPiece('h', 8, new Rook(board, Color.BLACK));
+
+        // Cavalos pretos
+        placeNewPiece('b', 8, new Knight(board, Color.BLACK));
+        placeNewPiece('g', 8, new Knight(board, Color.BLACK));
 
         // Bispos pretos
         placeNewPiece('c', 8, new Bishop(board, Color.BLACK));
